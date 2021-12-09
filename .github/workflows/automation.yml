@@ -17,7 +17,7 @@ jobs:
       uses: crayon/composite-projectautomation@v1.0.0-beta1
       with:
         project_number: 6
-        id: ${{ github.event.pull_request.node_id || github.event.issue.node_id }}
+        task_id: ${{ github.event.pull_request.node_id || github.event.issue.node_id }}
         repo-token: ${{ secrets.GHBOT_TOKEN }}
         
     - name: Mark stale issues and pull requests
